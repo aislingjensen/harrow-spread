@@ -1,0 +1,44 @@
+mixin cardDisplay(data, style)
+    if style
+        img(title=`${data['description']}` src=`../../cardImages/${data['id']}.png` style=`${style}`)
+    else
+        img(title=`${data['description']}` src=`../../cardImages/${data['id']}.png`)
+
+mixin spreadCard(data, iterator)
+    -var position = data['id']%9
+    if position == iterator
+        +cardDisplay(data, 'border: 4px solid rgb(36, 113, 200); margin: 4px')
+    else if position + iterator == 8 && [0,2,6,8].includes(position)
+        +cardDisplay(data, 'border:4px solid maroon; margin: 4px')
+    else if position % 3 == iterator % 3 || Math.floor(position / 3) == Math.floor(iterator / 3)
+        +cardDisplay(data, 'border:4px dashed rgb(36, 113, 200); margin: 4px')
+    else
+        +cardDisplay(data, 'border:4px solid transparent; margin: 4px')
+
+doctype
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous")
+        link(rel="stylesheet" href="harrow.css")
+        title Harrow Spread
+    body
+        .container
+            .row
+                .col-md-3
+                    p Player Column 1
+                .col-md-6
+                    p Harrow Spread
+                    .container
+                    -var iterator = 0
+                    while iterator < spreadData.length
+                        row
+                            +spreadCard(spreadData[iterator], iterator)
+                            -iterator++
+                            +spreadCard(spreadData[iterator], iterator)
+                            -iterator++
+                            +spreadCard(spreadData[iterator], iterator)
+                            -iterator++
+                .col-md-3
+                    p Player Column 2
+

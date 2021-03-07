@@ -1,0 +1,11 @@
+{
+    "name": "harrow-spread",
+    "title": "Harrow Spread Generator",
+    "description": "A simple module that generates journal entries containing Harrow spreads for use with Pathfinder.",
+    "author": "Hornet",
+    "version": "1.0.0",
+    "minimumCoreVersion": "0.5.0",
+    "esmodules" : [
+        "harrowSpread.js"
+    ]
+  }

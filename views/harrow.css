@@ -1,0 +1,9 @@
+.matched{
+    border: 2px solid rgb(36, 113, 200)
+}
+.antimatched{
+    border:2px solid maroon
+}
+.unmatched{
+    border:2px transparent
+}
