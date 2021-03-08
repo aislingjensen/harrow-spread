@@ -1,6 +1,8 @@
 import { compileFile } from 'pug';
 import { cards } from './HarrowCards.js';
 
+Hooks.on("init", ()=> console.log("Aisling Hello World"));
+
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -18,7 +20,3 @@ const GenerateHarrowSpread = () => {
         }
     )
 }
-
-GenerateHarrowSpread();
-
-export { GenerateHarrowSpread };
