@@ -8,5 +8,5 @@
     "scripts": [
         "harrowSpread.js"
     ],
-    "downloads": "https://github.com/aislingjensen/harrow-spread/raw/master/harrow-spread.zip"
+    "download": "https://github.com/aislingjensen/harrow-spread/raw/master/harrow-spread.zip"
 }
