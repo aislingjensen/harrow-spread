@@ -5,6 +5,7 @@
     "author": "Hornet",
     "version": "0.0.1",
     "minimumCoreVersion": "7.5.0",
+    "compatibleCoreVersion": "0.7.9",
     "scripts": [
         "harrowSpread.js"
     ],
