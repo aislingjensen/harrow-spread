@@ -7,7 +7,7 @@
     "minimumCoreVersion": "7.5.0",
     "compatibleCoreVersion": "0.7.9",
     "scripts": [
-        "harrowSpread.js"
+        "./harrowSpread.js"
     ],
     "download": "https://github.com/aislingjensen/harrow-spread/raw/master/harrow-spread.zip",
     "url": "https://github.com/aislingjensen/harrow-spread",
