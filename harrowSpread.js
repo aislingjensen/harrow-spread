@@ -1,7 +1,7 @@
-import { compileFile } from 'pug';
+import { compileFile } from './node_modules/pug/lib/index.js';
 import { cards } from './HarrowCards.js';
 
-Hooks.on("init", ()=> console.log("Aisling Hello World"));
+// Hooks.on("init", ()=> console.log("Aisling Hello World"));
 
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
